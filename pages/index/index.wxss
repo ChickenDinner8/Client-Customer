@@ -22,6 +22,47 @@
   color:orange;
   height: 20%;
 }
+.weui-tab {
+  height: 100rpx;
+}
 .weui-cells {
-    top: 50px;
+  margin: 0;
+}
+.weui-cell__ft {
+  display: flex;
+  flex-direction: row;
+}
+.food-name {
+  font-size: 40rpx;
+}
+.food-description {
+  font-size: 30rpx;
+  color: gainsboro;
+}
+.food-price {
+  font-size: 40rpx;
+  color: crimson;
+  margin-right:20rpx;
+}
+.bar {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.data {
+  display: flex;
+  flex-direction: row;
+}
+.total {
+  margin-top: 20rpx;
+}
+.comfirm-button {
+  width: 300rpx;
+  background-color: #fbc;
+  color: white;
+  margin: 0;
+  position: absolute;
+  right: 0;
 }
