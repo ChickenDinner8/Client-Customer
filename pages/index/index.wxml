@@ -9,7 +9,7 @@
                   <view class="weui-navbar__title">菜单</view>
               </view>
               <view class="weui-navbar__item">
-                  <view class="weui-navbar__title">评价</view>
+                  <view class="weui-navbar__title" bindtap="to_comment">评价</view>
               </view>
               <view class="weui-navbar__item">
                   <view class="weui-navbar__title">商家</view>
@@ -102,7 +102,7 @@
             <image src="../../images/cart.png" style="width: 100rpx; height: 100rpx;"></image>
             <view class='total'>共计 ￥0</view>
           </view>
-          <button class="comfirm-button" type='primary'>提交订单</button>
+          <button class="comfirm-button" type='primary' bindtap="to_submit">提交订单</button>
       </view>
 
   </view>
