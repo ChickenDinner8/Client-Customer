@@ -25,6 +25,8 @@
 .weui-tab {
   height: 100rpx;
 }
+
+/**菜单列表**/
 .weui-cells {
   margin: 0;
 }
@@ -44,6 +46,8 @@
   color: crimson;
   margin-right:20rpx;
 }
+
+/**底部结算栏**/
 .bar {
   display: flex;
   flex-direction: row;
@@ -64,5 +68,5 @@
   color: white;
   margin: 0;
   position: absolute;
-  right: 0;
+  right: 2rpx;
 }
