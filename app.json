@@ -5,8 +5,8 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#fbc",
+    "navigationBarTitleText": "Eat点点",
     "navigationBarTextStyle":"black"
   }
 }
