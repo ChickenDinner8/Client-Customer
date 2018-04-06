@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/comment/comment"
+    "pages/comment/comment",
+    "pages/submit/submit"
   ],
   "window": {
     "backgroundTextStyle": "light",

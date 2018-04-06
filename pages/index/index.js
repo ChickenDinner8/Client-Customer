@@ -52,7 +52,7 @@ Page({
     })
   },
   //保留当前页面，跳转到应用内的某个页面，使用wx.navigateBack可以返回到原页面。
-  start:function() {
+  to_comment:function() {
     wx.navigateTo({
       url: '../comment/comment',
       success: function (res) {
@@ -65,6 +65,21 @@ Page({
         // complete
       }
     })
+  },
+
+  to_submit: function () {
+    wx.navigateTo({
+      url: '../submit/submit',
+      success: function (res) {
+        // success
+      },
+      fail: function () {
+        // fail
+      },
+      complete: function () {
+        // complete
+      }
+    })
   }
-  
+
 })
