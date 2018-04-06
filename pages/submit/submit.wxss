@@ -1,0 +1,135 @@
+.order_detail {
+  height: 30px;
+  border-bottom: 1px solid #9aa6c3;
+}
+.order_detail_txt {
+  margin: 10px 10px 4px 10px;
+  height: 20px;
+  text-align: left;
+  color: #828282;
+  font-size: 30rpx;
+}
+
+.ma_pay_list {
+  height: 726rpx;
+  width: 100%;
+}
+
+.sub-cart-list {
+  height: 120rpx;
+  width: 94%;
+  position: relative;
+  margin-left:auto;
+  margin-right:auto;
+  border-bottom: 1px solid #CFCFCF;
+  overflow: hidden;
+  color: #000;
+}
+
+.sub-cart-img {
+  float: left;
+  margin-left: 25rpx;
+  margin-top: 5rpx;
+  margin-right: 20rpx;
+}
+
+.sub-cart-middle {
+  float: left;
+  width: 500rpx;
+  height: 120rpx;
+}
+
+.sub-cart-title {
+  height: 100rpx;
+  margin: 18rpx 10rpx 10rpx 50rpx;
+  color: #000;
+}
+
+
+.sub-cart-img image {
+  width: 148rpx;
+  height: 111rpx;
+  vertical-align: middle;
+}
+
+.sub-cart-img-inner {
+  height: 111rpx;
+  width: 148rpx;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.name {
+  width: 350rpx;
+  font-size: 35rpx;
+}
+
+.amount {
+  font-size: 30rpx;
+  text-align: right;
+  color: #828282;
+  width: 80rpx;
+  position: relative;
+  bottom: 40rpx;
+  left: 360rpx;
+}
+
+.s_price {
+  float: right;
+  font-size: 30rpx;
+  position: relative;
+  bottom: 23rpx;
+}
+
+.ps {
+  padding: 20rpx 20rpx;
+  border-top: 20rpx solid #edeff1;
+  font-size: 30rpx;
+  height: 180rpx;
+  width: 100%;
+}
+.ps text {
+  color: #828282;
+  font-size: 30rpx;
+}
+.ps_txt {
+  padding: 10rpx 10rpx;
+  width: 690rpx;
+  height: 160rpx;
+  background: #E8E8E8;
+  font-size: 30rpx;
+  line-height: 47rpx;
+  position: relative;
+  top: 20rpx;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 86rpx;
+  background-color: #363636;
+  color: white;
+}
+
+.price {
+  width: 60%;
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 15rpx;
+}
+
+.pay button {
+  width: 30%;
+  float: right;
+  height: 86rpx;
+  background: #de3120;
+  color: white;
+  font-size: 35rpx;
+}
+
+
+
+
