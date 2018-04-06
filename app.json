@@ -7,7 +7,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "Eat点点",
-        "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "Eat点点",
+    "navigationBarTextStyle":"black"
   }
 }

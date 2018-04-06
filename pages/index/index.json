@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fbc",
+    "navigationBarTitleText": "Eat点点",
+    "navigationBarTextStyle":"black"
+  }
+}

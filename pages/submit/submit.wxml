@@ -1,0 +1,131 @@
+<view class='order_detail'>
+    <view class='order_detail_txt'>订单详情</view>
+</view>
+
+<scroll-view class="cart-list ma_pay_list" scroll-y="true" scroll-x="false">
+    
+    <view class="sub-cart-list">
+        <view class="sub-cart-img">
+            <view class="sub-cart-img-inner">
+                <image src="../../images/food.jpg"></image>
+            </view>
+        </view>
+        <view class="sub-cart-middle w4">
+            <view class="sub-cart-title">
+                <view class='name'>三文鱼</view>
+                <view class="amount">x1</view>
+                <view class="s_price">￥41.00</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="sub-cart-list">
+        <view class="sub-cart-img">
+            <view class="sub-cart-img-inner">
+                <image src="../../images/salad.jpg"></image>
+            </view>
+        </view>
+        <view class="sub-cart-middle w4">
+            <view class="sub-cart-title">
+                <view class='name'>沙拉</view>
+                <view class="amount">x1</view>
+                <view class="s_price">￥15.00</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="sub-cart-list">
+        <view class="sub-cart-img">
+            <view class="sub-cart-img-inner">
+                <image src="../../images/chicken.jpg"></image>
+            </view>
+        </view>
+        <view class="sub-cart-middle w4">
+            <view class="sub-cart-title">
+                <view class='name'>鸡翅</view>
+                <view class="amount">x1</view>
+                <view class="s_price">￥18.00</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="sub-cart-list">
+        <view class="sub-cart-img">
+            <view class="sub-cart-img-inner">
+                <image src="../../images/fries.jpg"></image>
+            </view>
+        </view>
+        <view class="sub-cart-middle w4">
+            <view class="sub-cart-title">
+                <view class='name'>薯条</view>
+                <view class="amount">x1</view>
+                <view class="s_price">￥10.00</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="sub-cart-list">
+        <view class="sub-cart-img">
+            <view class="sub-cart-img-inner">
+                <image src="../../images/cola.jpg"></image>
+            </view>
+        </view>
+        <view class="sub-cart-middle w4">
+            <view class="sub-cart-title">
+                <view class='name'>可乐</view>
+                <view class="amount">x1</view>
+                <view class="s_price">￥7.00</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="sub-cart-list">
+        <view class="sub-cart-img">
+            <view class="sub-cart-img-inner">
+                <image src="../../images/Burger.jpg"></image>
+            </view>
+        </view>
+        <view class="sub-cart-middle w4">
+            <view class="sub-cart-title">
+                <view class='name'>汉堡</view>
+                <view class="amount">x1</view>
+                <view class="s_price">￥18.00</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="sub-cart-list">
+        <view class="sub-cart-img">
+            <view class="sub-cart-img-inner">
+                <image src="../../images/ic.jpg"></image>
+            </view>
+        </view>
+        <view class="sub-cart-middle w4">
+            <view class="sub-cart-title">
+                <view class='name'>冰激凌</view>
+                <view class="amount">x1</view>
+                <view class="s_price">￥6.00</view>
+            </view>
+        </view>
+    </view>
+
+    
+</scroll-view>
+
+<view class="ps">
+	<text class="z">备注：</text>
+    <input class="ps_txt z" type="text" placeholder="请输入你对菜品的要求" />
+</view>
+
+
+<view class="bottom">
+    <view class="price">
+        <view>总计： ￥<text class="price_num">100.00</text></view>
+    </view>
+    <view class="pay">
+	      <button type="default">去支付</button>
+    </view>
+</view>
+
+
+
