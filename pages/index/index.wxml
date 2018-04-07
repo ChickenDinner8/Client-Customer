@@ -1,13 +1,109 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+<view class="page">
+
+
+  <view class="page__bd">
+      <view class="weui-tab">
+          <view class="weui-navbar">
+              <view class="weui-navbar__item weui-bar__item_on">
+                  <view class="weui-navbar__title">菜单</view>
+              </view>
+              <view class="weui-navbar__item">
+                  <view class="weui-navbar__title" bindtap="to_comment">评价</view>
+              </view>
+              <view class="weui-navbar__item">
+                  <view class="weui-navbar__title">商家</view>
+              </view>
+          </view>
+      </view>
+  
+      <scroll-view class="weui-cells" scroll-y="true" style="height: 1000rpx;">
+          <view class="weui-cell">
+              <view class="weui-cell__hd"> <image src="../../images/汉堡.png" style="width: 150rpx; height: 150rpx;"></image>
+              </view>
+              <view class="weui-cell__bd">
+                  <view class="food-name">板烧鸡腿堡</view>
+                  <view class="food-description">里面的肉很好吃</view>                        
+              </view>
+              <view class="weui-cell__ft">
+                <view class="food-price">￥17</view>
+                <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;"></image>
+              </view>
+          </view>
+
+          <view class="weui-cell">
+              <view class="weui-cell__hd"> <image src="../../images/薯条.png" style="width: 150rpx; height: 150rpx;"></image>
+              </view>
+              <view class="weui-cell__bd">
+                <view class="food-name">薯条</view>
+                <view class="food-description">新鲜出炉的炸薯条</view> 
+              </view>
+              <view class="weui-cell__ft">
+                   <view class="food-price">￥10</view>
+                   <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;"></image>
+              </view>
+          </view>
+
+            <view class="weui-cell">
+              <view class="weui-cell__hd"> <image src="../../images/汽水.png" style="width: 150rpx; height: 150rpx;"></image>
+              </view>
+              <view class="weui-cell__bd">
+                <view class="food-name">汽水</view>
+                <view class="food-description">百事可乐/可口可乐</view> 
+              </view>
+              <view class="weui-cell__ft">
+                   <view class="food-price">￥5</view>
+                   <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;"></image>
+              </view>
+          </view>
+
+            <view class="weui-cell">
+              <view class="weui-cell__hd"> <image src="../../images/鸡腿.png" style="width: 150rpx; height: 150rpx;"></image>
+              </view>
+              <view class="weui-cell__bd">
+                <view class="food-name">鸡腿</view>
+                <view class="food-description">10蚊鸡2个？冇可能</view> 
+              </view>
+              <view class="weui-cell__ft">
+                   <view class="food-price">￥10</view>
+                   <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;"></image>
+              </view>
+          </view>
+
+            <view class="weui-cell">
+              <view class="weui-cell__hd"> <image src="../../images/热狗.png" style="width: 150rpx; height: 150rpx;"></image>
+              </view>
+              <view class="weui-cell__bd">
+                <view class="food-name">热狗</view>
+                <view class="food-description">新天地新开的热狗店</view> 
+              </view>
+              <view class="weui-cell__ft">
+                   <view class="food-price">￥9</view>
+                   <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;"></image>
+              </view>
+          </view>
+
+            <view class="weui-cell">
+              <view class="weui-cell__hd"> <image src="../../images/饭团.png" style="width: 150rpx; height: 150rpx;"></image>
+              </view>
+              <view class="weui-cell__bd">
+                <view class="food-name">三角饭团</view>
+                <view class="food-description">吊打全家饭团</view> 
+              </view>
+              <view class="weui-cell__ft">
+                   <view class="food-price">￥8</view>
+                   <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;"></image>
+              </view>
+          </view>                             
+      </scroll-view>
+
+      <view class="bar">
+          <view class="data">
+            <image src="../../images/cart.png" style="width: 100rpx; height: 100rpx;"></image>
+            <view class='total'>共计 ￥0</view>
+          </view>
+          <button class="comfirm-button" type='primary' bindtap="to_submit">提交订单</button>
+      </view>
+
   </view>
 </view>
