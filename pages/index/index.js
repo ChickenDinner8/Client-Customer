@@ -7,7 +7,17 @@ Page({
     motto: 'ChickenDinner8！',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    
+    menu:[{
+      name: 'hamburger',
+      price: '5',
+      dsp: 'yummy'
+    }, {
+      name: '薯条',
+      price: '10',
+      dsp: 'bobocui'
+    }]
   },
   //事件处理函数
   bindViewTap: function() {
