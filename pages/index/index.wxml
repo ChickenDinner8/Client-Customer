@@ -1,4 +1,19 @@
 <!--index.wxml-->
+<template name="menuItem">
+  <view class="weui-cell">
+    <view class="weui-cell__hd"> <image src="../../images/汉堡.png" style="width: 150rpx; height: 150rpx;"></image>
+    </view>
+    <view class="weui-cell__bd">
+        <view class="food-name">{{name}}</view>
+        <view class="food-description">{{dsp}}</view>                        
+    </view>
+    <view class="weui-cell__ft">
+      <view class="food-price">￥{{price}}</view>
+      <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;"></image>
+    </view>
+  </view>
+</template>
+
 <view class="page">
 
 
@@ -18,83 +33,10 @@
       </view>
   
       <scroll-view class="weui-cells" scroll-y="true" style="height: 1000rpx;">
-          <view class="weui-cell">
-              <view class="weui-cell__hd"> <image src="../../images/汉堡.png" style="width: 150rpx; height: 150rpx;"></image>
-              </view>
-              <view class="weui-cell__bd">
-                  <view class="food-name">板烧鸡腿堡</view>
-                  <view class="food-description">里面的肉很好吃</view>                        
-              </view>
-              <view class="weui-cell__ft">
-                <view class="food-price">￥17</view>
-                <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;"></image>
-              </view>
-          </view>
-
-          <view class="weui-cell">
-              <view class="weui-cell__hd"> <image src="../../images/薯条.png" style="width: 150rpx; height: 150rpx;"></image>
-              </view>
-              <view class="weui-cell__bd">
-                <view class="food-name">薯条</view>
-                <view class="food-description">新鲜出炉的炸薯条</view> 
-              </view>
-              <view class="weui-cell__ft">
-                   <view class="food-price">￥10</view>
-                   <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;"></image>
-              </view>
-          </view>
-
-            <view class="weui-cell">
-              <view class="weui-cell__hd"> <image src="../../images/汽水.png" style="width: 150rpx; height: 150rpx;"></image>
-              </view>
-              <view class="weui-cell__bd">
-                <view class="food-name">汽水</view>
-                <view class="food-description">百事可乐/可口可乐</view> 
-              </view>
-              <view class="weui-cell__ft">
-                   <view class="food-price">￥5</view>
-                   <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;"></image>
-              </view>
-          </view>
-
-            <view class="weui-cell">
-              <view class="weui-cell__hd"> <image src="../../images/鸡腿.png" style="width: 150rpx; height: 150rpx;"></image>
-              </view>
-              <view class="weui-cell__bd">
-                <view class="food-name">鸡腿</view>
-                <view class="food-description">10蚊鸡2个？冇可能</view> 
-              </view>
-              <view class="weui-cell__ft">
-                   <view class="food-price">￥10</view>
-                   <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;"></image>
-              </view>
-          </view>
-
-            <view class="weui-cell">
-              <view class="weui-cell__hd"> <image src="../../images/热狗.png" style="width: 150rpx; height: 150rpx;"></image>
-              </view>
-              <view class="weui-cell__bd">
-                <view class="food-name">热狗</view>
-                <view class="food-description">新天地新开的热狗店</view> 
-              </view>
-              <view class="weui-cell__ft">
-                   <view class="food-price">￥9</view>
-                   <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;"></image>
-              </view>
-          </view>
-
-            <view class="weui-cell">
-              <view class="weui-cell__hd"> <image src="../../images/饭团.png" style="width: 150rpx; height: 150rpx;"></image>
-              </view>
-              <view class="weui-cell__bd">
-                <view class="food-name">三角饭团</view>
-                <view class="food-description">吊打全家饭团</view> 
-              </view>
-              <view class="weui-cell__ft">
-                   <view class="food-price">￥8</view>
-                   <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;"></image>
-              </view>
-          </view>                             
+      <view wx:for="{{menu}}">
+        <template is="menuItem" data="{{...item}}"/>
+      </view>
+                               
       </scroll-view>
 
       <view class="bar">
