@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <template name="menuItem">
   <view class="weui-cell">
-    <view class="weui-cell__hd"> <image src="../../images/汉堡.png" style="width: 150rpx; height: 150rpx;"></image>
+    <view class="weui-cell__hd"> <image src="{{pic}}" style="width: 150rpx; height: 150rpx;"></image>
     </view>
     <view class="weui-cell__bd">
         <view class="food-name">{{name}}</view>
@@ -15,8 +15,6 @@
 </template>
 
 <view class="page">
-
-
   <view class="page__bd">
       <view class="weui-tab">
           <view class="weui-navbar">
@@ -35,8 +33,7 @@
       <scroll-view class="weui-cells" scroll-y="true" style="height: 1000rpx;">
       <view wx:for="{{menu}}">
         <template is="menuItem" data="{{...item}}"/>
-      </view>
-                               
+      </view>                         
       </scroll-view>
 
       <view class="bar">
