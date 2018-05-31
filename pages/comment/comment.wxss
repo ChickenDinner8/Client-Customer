@@ -18,7 +18,7 @@
   /*padding: 10px, 10px, 10px, 10px*/
   margin-top: 10rpx;
   margin-left: 10rpx;
-  color: "#980000";
+  color: "##980000";
   background-color: "#980000";
   fill-opacity: 0.5; 
 }

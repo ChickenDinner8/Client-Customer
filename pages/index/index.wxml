@@ -31,7 +31,7 @@
       </view>
   
       <scroll-view class="weui-cells" scroll-y="true" style="height: 1000rpx;">
-      <view wx:for="{{menu}}">
+      <view wx:for="{{menu}}" wx:key="menu_block">
         <template is="menuItem" data="{{...item}}"/>
       </view>                         
       </scroll-view>
