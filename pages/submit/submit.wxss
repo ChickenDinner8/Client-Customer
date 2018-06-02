@@ -45,7 +45,6 @@
   color: #000;
 }
 
-
 .sub-cart-img image {
   width: 148rpx;
   height: 111rpx;
@@ -71,7 +70,7 @@
   color: #828282;
   width: 80rpx;
   position: relative;
-  bottom: 40rpx;
+  bottom: 55rpx;
   left: 360rpx;
 }
 
@@ -79,7 +78,7 @@
   float: right;
   font-size: 30rpx;
   position: relative;
-  bottom: 23rpx;
+  bottom: 50rpx;
 }
 
 .ps {
