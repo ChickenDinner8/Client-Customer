@@ -39,7 +39,7 @@
         <view class="weui-panel__ft">
             <view class="weui-cell weui-cell_access weui-cell_link">
                 <view class="weui-cell__bd">我也要评论</view>
-                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                <view class="weui-cell__ft weui-cell__ft_in-access bindtap="to_newcomment""></view>
             </view>
         </view>
     </view>
