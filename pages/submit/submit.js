@@ -5,7 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    order:[{
+      name: '三文鱼',
+      count: '1',
+      price: '41',
+      img: '../../images/food.jpg'
+    },{
+      name: '沙拉',
+      count: '1',
+      price: '15',
+      img: '../../images/salad.jpg' 
+    }]
   },
 
   /**
