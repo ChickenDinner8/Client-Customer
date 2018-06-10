@@ -9,16 +9,20 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'), 
     menu:[{
+      index: '0',
       name: '板烧鸡腿堡',
       price: '5',
       dsp: '香嫩多汁',
       pic: '../../images/汉堡.png'
     }, {
+      index: '1',
       name: '薯条',
       price: '10',
       dsp: '新鲜出炉',
       pic: '../../images/薯条.png'
-    }]
+    }],
+    totalPrice: '0',
+    latestPrice: '0'
   },
   //事件处理函数
   bindViewTap: function() {
@@ -91,6 +95,17 @@ Page({
         // complete
       }
     })
-  }
+  },
+
+  // 将菜品加入购物车
+  /*addDish: function() {
+    this.setData({total: "2"})
+  },*/
+  addDish: function(event) {
+    console.log(event)
+    //this.setData({latestPrice: this.data.latestPrice + this.data.menu[0].price})
+    this.setData({ latestPrice: parseFloat(this.data.latestPrice) + parseFloat(this.data.menu[event.target.dataset.index].price) })
+    this.setData({ totalPrice: this.data.latestPrice})
+  },
 
 })

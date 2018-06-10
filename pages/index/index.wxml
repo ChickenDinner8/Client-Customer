@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<template name="menuItem">
+<template name="menuItem" >
   <view class="weui-cell">
     <view class="weui-cell__hd"> <image src="{{pic}}" style="width: 150rpx; height: 150rpx;"></image>
     </view>
@@ -9,7 +9,7 @@
     </view>
     <view class="weui-cell__ft">
       <view class="food-price">￥{{price}}</view>
-      <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;"></image>
+      <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;" data-index="{{index}}" bindtap='addDish'></image>
     </view>
   </view>
 </template>
@@ -31,15 +31,15 @@
       </view>
   
       <scroll-view class="weui-cells" scroll-y="true" style="height: 1000rpx;">
-      <view wx:for="{{menu}}" wx:key="menu_block">
-        <template is="menuItem" data="{{...item}}"/>
-      </view>                         
+        <view wx:for="{{menu}}" wx:key="menu_block">
+          <template is="menuItem" data="{{...item}}"/>
+        </view>                         
       </scroll-view>
 
       <view class="bar">
           <view class="data">
             <image src="../../images/cart.png" style="width: 100rpx; height: 100rpx;"></image>
-            <view class='total'>共计 ￥0</view>
+            <view class='total'>共计 ￥{{totalPrice}}</view>
           </view>
           <button class="comfirm-button" type='primary' bindtap="to_submit">提交订单</button>
       </view>
