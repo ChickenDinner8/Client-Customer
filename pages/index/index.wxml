@@ -37,9 +37,11 @@
       </scroll-view>
 
       <view class="bar">
-          <view class="data">
-            <image src="../../images/cart.png" style="width: 100rpx; height: 100rpx;"></image>
-            <view class='total'>共计 ￥{{totalPrice}}</view>
+          <view class="cart">
+            <image src="../../images/cart.png" style="width: 100rpx; height: 100rpx;">
+              <span class="cart-num" wx:if="{{totalNum!=0}}">{{totalNum}}</span>
+            </image>
+            <view class='cart-price'>共计 ￥{{totalPrice}}</view>
           </view>
           <button class="comfirm-button" type='primary' bindtap="to_submit">提交订单</button>
       </view>

@@ -10,8 +10,9 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'), 
     menu: [],
     shopping: [],
+    latestPrice: '0',
     totalPrice: '0',
-    latestPrice: '0'
+    totalNum: '0'
   },
   //事件处理函数
   bindViewTap: function() {
@@ -126,6 +127,7 @@ Page({
     var obj = this.data.menu[event.target.dataset.index]
     this.setData({ latestPrice: parseFloat(this.data.latestPrice) + parseFloat(obj.price) })
     this.setData({ totalPrice: this.data.latestPrice})
+    this.setData({ totalNum: parseInt(this.data.totalNum) + 1 })
     obj.count++
     console.log('add food ', obj.index)
   },

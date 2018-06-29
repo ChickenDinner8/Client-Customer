@@ -55,11 +55,24 @@
   bottom: 0;
   width: 100%;
 }
-.data {
+.cart {
   display: flex;
   flex-direction: row;
 }
-.total {
+
+.cart-num {
+  position:absolute;
+  left:58rpx;
+  top:0rpx;
+  font-size:25rpx;
+  line-height:36rpx;
+  padding:0 12rpx;
+  color:#fff;
+  background:#f45044;
+  border-radius:20rpx;
+}
+
+.cart-price {
   margin-top: 20rpx;
 }
 .comfirm-button {

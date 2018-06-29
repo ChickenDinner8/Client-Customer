@@ -40,7 +40,7 @@
             <view>总计： ￥<text class="price_num">{{totalPrice}}</text></view>
           </view>
           <view class="pay">
-	          <button type="default">提交订单</button>
+	          <button type="default">确认订单</button>
           </view>
         </view>
         
