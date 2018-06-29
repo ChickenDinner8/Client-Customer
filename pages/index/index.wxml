@@ -1,15 +1,15 @@
 <!--index.wxml-->
 <template name="menuItem" >
   <view class="weui-cell">
-    <view class="weui-cell__hd"> <image src="{{pic}}" style="width: 150rpx; height: 150rpx;"></image>
+    <view class="weui-cell__hd"> <image src="{{image}}" style="width: 150rpx; height: 150rpx;"></image>
     </view>
     <view class="weui-cell__bd">
-        <view class="food-name">{{name}}</view>
-        <view class="food-description">{{dsp}}</view>                        
+        <view class="food-name">{{food_name}}</view>
+        <view class="food-description">{{description}}</view>                        
     </view>
     <view class="weui-cell__ft">
       <view class="food-price">￥{{price}}</view>
-      <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;" data-index="{{index}}" bindtap='addDish'></image>
+      <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;" data-index="{{index}}" id="{{index}}" bindtap='addDish'></image>
     </view>
   </view>
 </template>

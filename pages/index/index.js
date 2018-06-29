@@ -8,19 +8,8 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'), 
-    menu:[{
-      index: '0',
-      name: '板烧鸡腿堡',
-      price: '5',
-      dsp: '香嫩多汁',
-      pic: '../../images/汉堡.png'
-    }, {
-      index: '1',
-      name: '薯条',
-      price: '10',
-      dsp: '新鲜出炉',
-      pic: '../../images/薯条.png'
-    }],
+    menu: [],
+    shopping: [],
     totalPrice: '0',
     latestPrice: '0'
   },
@@ -57,6 +46,36 @@ Page({
         }
       })
     }
+
+    // request 
+    var that = this
+    wx.request({
+      url: 'http://206.189.223.252/api/menu/4',
+      method: 'GET',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function(res) {
+        //console.log('get menu', res.data.foods)
+        that.setData({
+          menu: res.data.foods
+        })
+        for (var i = 0; i < that.data.menu.length; i++) {
+          //that.data.menu[i].index = i.toString();
+          var param = {}
+          var string = 'menu[' + i + '].index'
+          param[string] = i
+          that.setData(param)
+          string = 'menu[' + i + '].count'
+          param[string] = 0
+          that.setData(param)
+        }
+        //console.log('set menu', that.data.menu)
+      },
+      fail: function(res) {
+        console.log('failed to load!')
+      }
+    })
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -83,6 +102,9 @@ Page({
   },
 
   to_submit: function () {
+    wx.setStorageSync('data', this.data.menu)
+    wx.setStorageSync('totalPrice', this.data.totalPrice)
+    
     wx.navigateTo({
       url: '../submit/submit',
       success: function (res) {
@@ -98,14 +120,14 @@ Page({
   },
 
   // 将菜品加入购物车
-  /*addDish: function() {
-    this.setData({total: "2"})
-  },*/
   addDish: function(event) {
-    console.log(event)
-    //this.setData({latestPrice: this.data.latestPrice + this.data.menu[0].price})
-    this.setData({ latestPrice: parseFloat(this.data.latestPrice) + parseFloat(this.data.menu[event.target.dataset.index].price) })
+    //console.log('set menu', this.data.menu)
+    //console.log('click event', event.target)
+    var obj = this.data.menu[event.target.dataset.index]
+    this.setData({ latestPrice: parseFloat(this.data.latestPrice) + parseFloat(obj.price) })
     this.setData({ totalPrice: this.data.latestPrice})
+    obj.count++
+    console.log('add food ', obj.index)
   },
 
 })
