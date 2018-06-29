@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    order:[]
+    order:[],
+    totalPrice: ""
   },
 
   /**
@@ -13,10 +14,15 @@ Page({
    */
   onLoad: function (options) {
     let menu = wx.getStorageSync('data')
+    console.log('load', menu)
     this.setData({
       order: menu
     })
-    wx.clearStorageSync('data')
+    let totalPrice = wx.getStorageSync('totalPrice')
+    this.setData({
+      totalPrice: totalPrice
+    })
+    //wx.clearStorageSync('data')
   },
 
   /**

@@ -102,7 +102,9 @@ Page({
   },
 
   to_submit: function () {
-    wx.setStorageSync('data', 'menu')
+    wx.setStorageSync('data', this.data.menu)
+    wx.setStorageSync('totalPrice', this.data.totalPrice)
+    
     wx.navigateTo({
       url: '../submit/submit',
       success: function (res) {
