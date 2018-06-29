@@ -16,6 +16,7 @@
   </view>
 </template>
 
+<<<<<<< HEAD
 <view class='order_detail'>
     <view class='order_detail_txt'>订单详情</view>
 </view>
@@ -43,3 +44,35 @@
 
 
 
+=======
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">订单详情</view>
+              <scroll-view class="weui-cells" scroll-y="true">
+                <view wx:for="{{order}}" wx:key="order_block">
+                  <template is="orderItem" data="{{...item}}"/>
+                </view>                     
+              </scroll-view>
+        </view>
+        <view class="weui-cells__title">备注</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea class="weui-textarea" placeholder="请输入对菜品的要求" style="height: 3.3em" />
+                    <view class="weui-textarea-counter">0/200</view>
+                </view>
+            </view>
+        </view>
+        <view class="bottom">
+          <view class="price">
+            <view>总计： ￥<text class="price_num">100.00</text></view>
+          </view>
+          <view class="pay">
+	          <button type="default">去支付</button>
+          </view>
+        </view>
+        
+    </view>
+</view>
+>>>>>>> master

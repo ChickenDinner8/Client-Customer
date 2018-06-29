@@ -6,8 +6,13 @@
     "pages/comment/comment",
     "pages/newcomment/newcomment"
   ],
+<<<<<<< HEAD
   "window": {
     "backgroundTextStyle": "light",
+=======
+  "window":{
+    "backgroundTextStyle":"light",
+>>>>>>> master
     "navigationBarBackgroundColor": "#abd",
     "navigationBarTitleText": "Eat点点",
     "navigationBarTextStyle": "black"

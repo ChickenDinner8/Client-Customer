@@ -28,6 +28,7 @@ Page({
       unlikeCount: '50'
     }]
   },  
+<<<<<<< HEAD
   //保留当前页面，跳转到应用内的某个页面，使用wx.navigateBack可以返回到原页面。
   to_newcomment: function () {
     wx.navigateTo({
@@ -43,4 +44,6 @@ Page({
       }
     })
   },
+=======
+>>>>>>> master
 });

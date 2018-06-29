@@ -10,7 +10,7 @@
   font-size: 30rpx;
 }
 
-.ma_pay_list {
+.w {
   height: 726rpx;
   width: 100%;
 }
