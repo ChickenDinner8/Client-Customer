@@ -121,11 +121,11 @@ Page({
     this.setData({total: "2"})
   },*/
   addDish: function(event) {
-    //console.log('set menu', this.data.menu)
-    //console.log('click event', event.target)
+    console.log('set menu', this.data.menu)
+    console.log('click event', event.target)
     var id = event.target.dataset.index
     this.setData({ latestPrice: parseFloat(this.data.latestPrice) + parseFloat(this.data.menu[id].price) })
-    //this.setData({ latestPrice: parseFloat(this.data.latestPrice) + parseFloat(event.target.id) })
+    this.setData({ latestPrice: parseFloat(this.data.latestPrice) + parseFloat(event.target.id) })
     this.setData({ totalPrice: this.data.latestPrice})
 
   },
