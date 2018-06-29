@@ -3,12 +3,12 @@
   <view class="sub-cart-list">
     <view class="sub-cart-img">
         <view class="sub-cart-img-inner">
-            <image src="{{img}}"></image>
+            <image src="{{image}}"></image>
         </view>
     </view>
     <view class="sub-cart-middle w4">
         <view class="sub-cart-title">
-            <view class='name'>{{name}}</view>
+            <view class='name'>{{food_name}}</view>
             <view class="amount">x{{count}}</view>
             <view class="s_price">￥{{price}}</view>
         </view>

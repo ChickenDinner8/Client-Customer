@@ -66,7 +66,7 @@ Page({
           var string = 'menu[' + i + '].index'
           param[string] = i
           that.setData(param)
-          string = 'menu[' + i + '].num'
+          string = 'menu[' + i + '].count'
           param[string] = 0
           that.setData(param)
         }
@@ -102,6 +102,7 @@ Page({
   },
 
   to_submit: function () {
+    wx.setStorageSync('data', 'menu')
     wx.navigateTo({
       url: '../submit/submit',
       success: function (res) {
@@ -117,17 +118,14 @@ Page({
   },
 
   // 将菜品加入购物车
-  /*addDish: function() {
-    this.setData({total: "2"})
-  },*/
   addDish: function(event) {
     //console.log('set menu', this.data.menu)
     //console.log('click event', event.target)
-    var id = event.target.dataset.index
-    this.setData({ latestPrice: parseFloat(this.data.latestPrice) + parseFloat(this.data.menu[id].price) })
-    this.setData({ latestPrice: parseFloat(this.data.latestPrice) + parseFloat(event.target.id) })
+    var obj = this.data.menu[event.target.dataset.index]
+    this.setData({ latestPrice: parseFloat(this.data.latestPrice) + parseFloat(obj.price) })
     this.setData({ totalPrice: this.data.latestPrice})
-
+    obj.count++
+    console.log('add food ', obj.index)
   },
 
 })

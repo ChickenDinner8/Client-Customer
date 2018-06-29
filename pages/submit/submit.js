@@ -5,24 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    order:[{
-      name: '三文鱼',
-      count: '1',
-      price: '41',
-      img: '../../images/food.jpg'
-    },{
-      name: '沙拉',
-      count: '1',
-      price: '15',
-      img: '../../images/salad.jpg' 
-    }]
+    order:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let menu = wx.getStorageSync('data')
+    this.setData({
+      order: menu
+    })
+    wx.clearStorageSync('data')
   },
 
   /**
