@@ -9,7 +9,9 @@
   color: #828282;
   font-size: 30rpx;
 }
-
+.k{
+  
+}
 .w {
   height: 726rpx;
   width: 100%;
