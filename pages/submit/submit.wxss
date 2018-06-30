@@ -11,6 +11,7 @@
 }
 .k{
   width: 100%;
+  font-size: 30rpx;
 }
 .w {
   height: 726rpx;
