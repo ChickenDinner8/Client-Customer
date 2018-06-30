@@ -43,7 +43,7 @@
             <view class="name ellipsis">{{menu[index].food_name}}</view>
             <view class="total">￥{{menu[index].price}}</view>
             <view class="minus-btn" data-id="{{index}}" bindtap="tapReduceCart">-</view>
-            <view class="num">{{menu[index].count}}</view>
+            <view class="num">{{menu[index].num}}</view>
             <view class="add-btn" data-id="{{index}}" bindtap="tapAddCart">+</view>
         </view>
       </view>
