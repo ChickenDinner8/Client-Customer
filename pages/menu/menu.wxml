@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<template name="menuItem" >
+  <view class="weui-cell">
+    <view class="weui-cell__hd"> <image src="{{image}}" style="width: 150rpx; height: 150rpx;"></image>
+    </view>
+    <view class="weui-cell__bd">
+        <view class="food-name">{{food_name}}</view>
+        <view class="food-description">{{description}}</view>                        
+    </view>
+    <view class="weui-cell__ft">
+      <view class="food-price">￥{{price}}</view>
+      <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;" data-index="{{index}}" id="{{index}}" bindtap='addDish'></image>
+    </view>
+  </view>
+</template>
+
+<view class="page">
+  <view class="page__bd">
+      <view class="weui-tab">
+          <view class="weui-navbar">
+              <view class="weui-navbar__item weui-bar__item_on">
+                  <view class="weui-navbar__title">菜单</view>
+              </view>
+              <view class="weui-navbar__item">
+                  <view class="weui-navbar__title" bindtap="to_comment">评价</view>
+              </view>
+              <view class="weui-navbar__item">
+                  <view class="weui-navbar__title">商家</view>
+              </view>
+          </view>
+      </view>
+  
+      <scroll-view class="weui-cells" scroll-y="true" style="height: 1000rpx;">
+        <view wx:for="{{menu}}" wx:key="menu_block">
+          <template is="menuItem" data="{{...item}}"/>
+        </view>                         
+      </scroll-view>
+
+      <view class="bar">
+          <view class="cart">
+            <image src="../../images/cart.png" style="width: 100rpx; height: 100rpx;">
+              <span class="cart-num" wx:if="{{totalNum!=0}}">{{totalNum}}</span>
+            </image>
+            <view class='cart-price'>共计 ￥{{totalPrice}}</view>
+          </view>
+          <button class="comfirm-button" type='primary' bindtap="to_submit">提交订单</button>
+      </view>
+
+  </view>
+</view>

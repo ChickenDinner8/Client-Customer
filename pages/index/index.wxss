@@ -1,85 +1,24 @@
 /**index.wxss**/
-/*.userinfo {
+.userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
-}*/
+}
 
-/*.userinfo-avatar {
+.userinfo-avatar {
   width: 128rpx;
   height: 128rpx;
   margin: 20rpx;
   border-radius: 50%;
-}*/
+}
 
-/*.userinfo-nickname {
+.userinfo-nickname {
   color: #aaa;
-}*/
+}
 
 .usermotto {
-  /*color: #aaa;*/
-  text-align: center;
-  color:orange;
-  height: 20%;
+  margin-top: 200px;
 }
-.weui-tab {
-  height: 100rpx;
-}
-
-/**菜单列表**/
-.weui-cells {
-  margin: 0;
-}
-.weui-cell__ft {
-  display: flex;
-  flex-direction: row;
-}
-.food-name {
-  font-size: 40rpx;
-}
-.food-description {
-  font-size: 30rpx;
-  color: gainsboro;
-}
-.food-price {
-  font-size: 40rpx;
-  color: crimson;
-  margin-right:20rpx;
-}
-
-/**底部结算栏**/
-.bar {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-.cart {
-  display: flex;
-  flex-direction: row;
-}
-
-.cart-num {
-  position:absolute;
-  left:58rpx;
-  top:0rpx;
-  font-size:25rpx;
-  line-height:36rpx;
-  padding:0 12rpx;
-  color:#fff;
-  background:#f45044;
-  border-radius:20rpx;
-}
-
-.cart-price {
-  margin-top: 20rpx;
-}
-.comfirm-button {
-  width: 300rpx;
-  background-color: #fbc;
-  color: white;
-  margin: 0;
-  position: absolute;
-  right: 2rpx;
+button {
+  margin-bottom: 20rpx;
 }
