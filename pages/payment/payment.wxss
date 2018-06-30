@@ -1,0 +1,40 @@
+/* pages/payment/payment.wxss */
+.page, .icon-box, .price{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.okicon {
+	padding-bottom: 30rpx;
+}
+.hint {
+	margin-top: 30rpx;
+}
+
+.icon-box {
+	margin-top: 180rpx;
+}
+
+.comfirm-button {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 16px;
+	height: 100rpx;
+	width: 300rpx;
+	background-color: #1AAD19;
+	color: white;
+	vertical-align:middle;
+	margin-top: 20rpx;
+
+}
+
+.price {
+	font-weight: bold;
+	margin-top: 300rpx;
+	font-size: 20pt;
+
+}

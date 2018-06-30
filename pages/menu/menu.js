@@ -48,6 +48,11 @@ Page({
       })
     }*/
 
+    wx.showToast({
+      title: '正在全力加载中',
+      icon: 'loading',
+      duration: 3000000
+    })
     // request 
     var that = this
     wx.request({
@@ -57,6 +62,7 @@ Page({
         'content-type': 'application/json'
       },
       success: function(res) {
+        wx.hideToast();
         //console.log('get menu', res.data.foods)
         that.setData({
           menu: res.data.foods
@@ -67,7 +73,7 @@ Page({
           var string = 'menu[' + i + '].index'
           param[string] = i
           that.setData(param)
-          string = 'menu[' + i + '].count'
+          string = 'menu[' + i + '].num'
           param[string] = 0
           that.setData(param)
         }
@@ -105,21 +111,35 @@ Page({
   },
 
   to_submit: function () {
-    wx.setStorageSync('data', this.data.menu)
-    wx.setStorageSync('totalPrice', this.data.totalPrice)
+    if (this.data.totalNum != '0') {
+      wx.setStorageSync('data', this.data.menu)
+      wx.setStorageSync('totalPrice', this.data.totalPrice)
+      wx.setStorageSync('totalNum', this.data.totalNum)
+
+      wx.navigateTo({
+        url: '../submit/submit',
+        success: function (res) {
+          // success
+        },
+        fail: function () {
+          // fail
+        },
+        complete: function () {
+          // complete
+        }
+      })
+    } else {
+      wx.showModal({
+        content: '小主还没点餐呢',
+        showCancel: false,
+        success: function (res) {
+          if (res.confirm) {
+            console.log('去点餐')
+          }
+        }
+      });
+    }
     
-    wx.navigateTo({
-      url: '../submit/submit',
-      success: function (res) {
-        // success
-      },
-      fail: function () {
-        // fail
-      },
-      complete: function () {
-        // complete
-      }
-    })
   },
 
   // 将菜品加入购物车
