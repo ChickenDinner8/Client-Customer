@@ -10,9 +10,9 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'), */
     menu: [],
     shopping: [],
-    latestPrice: '0',
-    totalPrice: '0',
-    totalNum: '0'
+    totalPrice: 0,
+    totalNum: '0',
+    showCartDetail: false
   },
   //事件处理函数
   /*bindViewTap: function() {
@@ -143,15 +143,24 @@ Page({
   },
 
   // 将菜品加入购物车
-  addDish: function(event) {
-    //console.log('set menu', this.data.menu)
-    //console.log('click event', event.target)
+  addDish: function(event) {  
+    var newMenu = this.data.menu
     var obj = this.data.menu[event.target.dataset.index]
-    this.setData({ latestPrice: parseFloat(this.data.latestPrice) + parseFloat(obj.price) })
-    this.setData({ totalPrice: this.data.latestPrice})
+    newMenu[event.target.dataset.index].num++
+    this.setData ({menu:newMenu})
+    this.setData({ totalPrice: this.data.totalPrice + parseFloat(obj.price) })
     this.setData({ totalNum: parseInt(this.data.totalNum) + 1 })
-    obj.num++
-    console.log('add food ', obj.index)
+    console.log('count ', obj.count)
+  },
+  showCartDetail: function () {
+    this.setData({
+      showCartDetail: !this.data.showCartDetail
+    });
+  },
+  hideCartDetail: function () {
+    this.setData({
+      showCartDetail: false
+    });
   },
 
 })
