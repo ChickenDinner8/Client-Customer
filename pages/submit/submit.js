@@ -32,6 +32,10 @@ Page({
     this.setData({
       customer_id: customer_id
     })
+    let totalNum = wx.getStorageSync('totalNum')
+    this.setData({
+      totalNum: totalNum
+    })
     console.log('load data', this.data)
     //wx.clearStorageSync('data')
   },
@@ -43,11 +47,12 @@ Page({
       icon: 'loading',
       duration: 30000
     })
+
     let postBody = {}
     postBody = {foods: that.data.order}
     console.log('postBody', postBody);
     ERequest({
-      url: getApp().globalData.baseUrl + '/restaurant/orders/4/111',
+      url: getApp().globalData.baseUrl + '/restaurant/orders/4/233',
       method: 'POST',
       data: postBody,
       success: res => {
