@@ -1,12 +1,19 @@
 // pages/submit/submit.js
+const ERequest = require('../../utils/util.js').ERequest;
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    motto: 'ChickenDinner8！',
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'), 
     order:[],
-    totalPrice: ""
+    totalPrice: '',
+    customer_id: ''
   },
 
   /**
@@ -14,7 +21,6 @@ Page({
    */
   onLoad: function (options) {
     let menu = wx.getStorageSync('data')
-    console.log('load', menu)
     this.setData({
       order: menu
     })
@@ -22,7 +28,39 @@ Page({
     this.setData({
       totalPrice: totalPrice
     })
+    let customer_id = wx.getStorageSync('customer_id')
+    this.setData({
+      customer_id: customer_id
+    })
+    console.log('load data', this.data)
     //wx.clearStorageSync('data')
+  },
+
+  submitOrder: function () {
+    var that = this
+    wx.showToast({
+      title: '订单提交中',
+      icon: 'loading',
+      duration: 30000
+    })
+    let postBody = {}
+    postBody = {foods: that.data.order}
+    console.log('postBody', postBody);
+    ERequest({
+      url: getApp().globalData.baseUrl + '/restaurant/orders/4/111',
+      method: 'POST',
+      data: postBody,
+      success: res => {
+        wx.hideToast();
+        console.log('submit success', res);
+        wx.navigateTo({
+          url: '../payment/payment',
+          success: function (res) {
+            console.log('succeed to payment page')
+          }
+        })
+      }
+    })
   },
 
   /**
