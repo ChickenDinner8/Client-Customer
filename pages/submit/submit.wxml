@@ -31,7 +31,6 @@
             <view class="weui-cell">
                 <view class="weui-cell__bd">
                     <textarea class="weui-textarea" placeholder="请输入对菜品的要求" style="height: 3.3em" />
-                    <view class="weui-textarea-numer">0/200</view>
                 </view>
             </view>
         </view>
