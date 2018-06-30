@@ -39,7 +39,7 @@
   <view class="cart-detail" hidden="{{!showCartDetail||!totalNum}}">
 		  <view class="mask" bindtap="hideCartDetail"></view>	
       <view class="cart-list">
-        <view class="item" wx:for="{{menu}}" wx:for-index="index" wx:if="{{menu[index].count!=0}}" wx:key="index">
+        <view class="item" wx:for="{{menu}}" wx:for-index="index" wx:if="{{menu[index].num!=0}}" wx:key="index">
             <view class="name ellipsis">{{menu[index].food_name}}</view>
             <view class="total">￥{{menu[index].price}}</view>
             <view class="minus-btn" data-id="{{index}}" bindtap="tapReduceCart">-</view>

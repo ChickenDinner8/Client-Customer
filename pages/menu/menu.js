@@ -126,11 +126,11 @@ Page({
   addDish: function(event) {  
     var newMenu = this.data.menu
     var obj = this.data.menu[event.target.dataset.index]
-    newMenu[event.target.dataset.index].count++
+    newMenu[event.target.dataset.index].num++
     this.setData ({menu:newMenu})
     this.setData({ totalPrice: this.data.totalPrice + parseFloat(obj.price) })
     this.setData({ totalNum: parseInt(this.data.totalNum) + 1 })
-    console.log('count ', obj.count)
+    console.log('count ', obj.num)
   },
   showCartDetail: function () {
     this.setData({
