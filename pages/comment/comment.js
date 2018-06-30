@@ -19,8 +19,8 @@ Page({
       likeCount: '10',
       unlikeCount: '99'
     }, {
-      img: '../../images/comment_img2.jpg',
-      userImg: '../../images/userimg2.png',
+      img: '../../images/comment_img1.jpg',
+      userImg: '../../images/userimg1.png',
       userName: '就是不说名字的人',
       date: '2018-02-11',
       desc: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。吧啦吧啦吧啦吧啦……',
