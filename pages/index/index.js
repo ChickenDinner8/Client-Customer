@@ -43,6 +43,8 @@ Page({
       })
     }
   },
+  onReady() {
+  },
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -52,6 +54,34 @@ Page({
     })
   },
   to_menu: function () {
+    wx.scanCode({
+      scanType: 'qrCode',
+      success: (res) => {
+        console.log(res.result);
+        wx.setStorageSync('tableInfo', JSON.parse(res.result));
+        wx.navigateTo({
+          url: '../menu/menu',
+          success: function (res) {
+            // success
+          },
+          fail: function () {
+            // fail
+          },
+          complete: function () {
+            // complete
+          }
+        })
+      },
+      fail: (err) => {
+        console.log(err);
+      }
+    })
+  },
+  to_menu_trick() {
+    wx.setStorageSync('tableInfo', {
+      "restaurantId": 4,
+      "tableId": '233'
+    });
     wx.navigateTo({
       url: '../menu/menu',
       success: function (res) {
@@ -63,6 +93,6 @@ Page({
       complete: function () {
         // complete
       }
-    })
+    });
   }
 })
