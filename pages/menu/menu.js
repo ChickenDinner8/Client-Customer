@@ -150,7 +150,7 @@ Page({
     this.setData ({menu:newMenu})
     this.setData({ totalPrice: this.data.totalPrice + parseFloat(obj.price) })
     this.setData({ totalNum: parseInt(this.data.totalNum) + 1 })
-    console.log('count ', obj.count)
+    console.log('count ', obj.num)
   },
   showCartDetail: function () {
     this.setData({
