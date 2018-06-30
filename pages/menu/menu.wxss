@@ -54,6 +54,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+  background:#f7f7f7;
 }
 .cart {
   display: flex;
@@ -82,4 +83,63 @@
   margin: 0;
   position: absolute;
   right: 2rpx;
+}
+
+.cart-detail, .cart-detail .mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cart-detail .mask {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.cart-detail .cart-list {
+  position: absolute;
+  left: 0;
+  bottom: 100rpx;
+  width: 100%;
+  background: #f7f7f7;
+  padding: 0rpx 0;
+}
+
+.cart-detail .cart-list .item {
+  display: -webkit-flex;
+  color: #333;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  padding: 6rpx 40rpx;
+}
+
+.cart-detail .cart-list .item .name {
+  -webkit-flex: 1;
+}
+
+.cart-detail .cart-list .item .total {
+  width: 120rpx;
+}
+
+.cart-detail .cart-list .item .minus-btn, .cart-detail .cart-list .item .add-btn {
+  /*position: absolute;*/
+  background: #abd;
+  margin-top: 10rpx;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  text-anchor: middle;
+  /*margin-top: 10rpx;
+  width: 30rpx;
+  height: 30rpx;
+  /*vertical-align: center; */
+  /*text-align: center;*/
+  /*border-radius: 50%;*/
+}
+
+.cart-detail .cart-list .item .num {
+  width: 50rpx;
+  text-align: center;
+  margin: 0 5rpx;
 }

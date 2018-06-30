@@ -36,8 +36,20 @@
         </view>                         
       </scroll-view>
 
+  <view class="cart-detail" hidden="{{!showCartDetail||!totalNum}}">
+		  <view class="mask" bindtap="hideCartDetail"></view>	
+      <view class="cart-list">
+        <view class="item" wx:for="{{menu}}" wx:for-index="index" wx:if="{{menu[index].count!=0}}" wx:key="index">
+            <view class="name ellipsis">{{menu[index].food_name}}</view>
+            <view class="total">￥{{menu[index].price}}</view>
+            <view class="minus-btn" data-id="{{index}}" bindtap="tapReduceCart">-</view>
+            <view class="num">{{menu[index].count}}</view>
+            <view class="add-btn" data-id="{{index}}" bindtap="tapAddCart">+</view>
+        </view>
+      </view>
+	</view>
       <view class="bar">
-          <view class="cart">
+          <view class="cart" bindtap="showCartDetail">
             <image src="../../images/cart.png" style="width: 100rpx; height: 100rpx;">
               <span class="cart-num" wx:if="{{totalNum!=0}}">{{totalNum}}</span>
             </image>
