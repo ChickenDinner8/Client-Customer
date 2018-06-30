@@ -21,7 +21,7 @@ Page({
     })
   },*/
   onLoad: function () {
-    if (app.globalData.userInfo) {
+    /*if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
@@ -46,7 +46,7 @@ Page({
           })
         }
       })
-    }
+    }*/
 
     // request 
     var that = this
@@ -74,19 +74,19 @@ Page({
         //console.log('set menu', that.data.menu)
       },
 
-      fail: function(res) {
+      /*fail: function(res) {
         console.log('failed to load!')
-      }
+      }*/
     })
   },
-  getUserInfo: function(e) {
+  /*getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  },
+  },*/
 
   //保留当前页面，跳转到应用内的某个页面，使用wx.navigateBack可以返回到原页面。
   to_comment:function() {
