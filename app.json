@@ -3,12 +3,13 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/submit/submit",
-    "pages/comment/comment"
+    "pages/comment/comment",
+    "pages/payment/payment"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#abd",
     "navigationBarTitleText": "Eat点点",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }

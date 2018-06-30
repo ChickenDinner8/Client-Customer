@@ -41,7 +41,7 @@
             <image src="../../images/cart.png" style="width: 100rpx; height: 100rpx;"></image>
             <view class='total'>共计 ￥{{totalPrice}}</view>
           </view>
-          <button class="comfirm-button" type='primary' bindtap="to_submit">提交订单</button>
+          <button class="comfirm-button" type='primary' bindtap="to_submit">去结算</button>
       </view>
 
   </view>

@@ -1,10 +1,16 @@
 // pages/submit/submit.js
+const ERequest = require('../../utils/util.js').ERequest;
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    motto: 'ChickenDinner8！',
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'), 
     order:[],
     totalPrice: '',
     customer_id: ''
@@ -32,22 +38,28 @@ Page({
 
   submitOrder: function () {
     var that = this
-    wx.request({
-      url: 'http://206.189.223.252/api/restaurant/orders/3',
-      data: {
-        'foods': that.data.order
-      },
+    wx.showToast({
+      title: '订单提交中',
+      icon: 'loading',
+      duration: 30000
+    })
+    let postBody = {}
+    postBody = {foods: that.data.order}
+    console.log('postBody', postBody);
+    ERequest({
+      url: getApp().globalData.baseUrl + '/restaurant/orders/4/111',
       method: 'POST',
-      header: {
-        'content-type':'application/x-www-form-urlencoded'
-      },
-      success: function(res) {
-        console.log(res)
-      },
-      fail: function(res) {
-        console.log(res)
+      data: postBody,
+      success: res => {
+        wx.hideToast();
+        console.log('submit success', res);
+        wx.navigateTo({
+          url: '../payment/payment',
+          success: function (res) {
+            console.log('succeed to payment page')
+          }
+        })
       }
-
     })
   },
 
