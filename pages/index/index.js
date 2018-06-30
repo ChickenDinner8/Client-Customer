@@ -9,7 +9,7 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'), 
     menu: [],
-    shopping: [],
+    customer_id: '111',
     totalPrice: '0',
     latestPrice: '0'
   },
@@ -66,7 +66,7 @@ Page({
           var string = 'menu[' + i + '].index'
           param[string] = i
           that.setData(param)
-          string = 'menu[' + i + '].count'
+          string = 'menu[' + i + '].num'
           param[string] = 0
           that.setData(param)
         }
@@ -104,7 +104,7 @@ Page({
   to_submit: function () {
     wx.setStorageSync('data', this.data.menu)
     wx.setStorageSync('totalPrice', this.data.totalPrice)
-    
+    wx.setStorageSync('customer_id', this.data.customer_id)
     wx.navigateTo({
       url: '../submit/submit',
       success: function (res) {
@@ -126,7 +126,7 @@ Page({
     var obj = this.data.menu[event.target.dataset.index]
     this.setData({ latestPrice: parseFloat(this.data.latestPrice) + parseFloat(obj.price) })
     this.setData({ totalPrice: this.data.latestPrice})
-    obj.count++
+    obj.num++
     console.log('add food ', obj.index)
   },
 

@@ -6,7 +6,8 @@ Page({
    */
   data: {
     order:[],
-    totalPrice: ""
+    totalPrice: '',
+    customer_id: ''
   },
 
   /**
@@ -14,7 +15,6 @@ Page({
    */
   onLoad: function (options) {
     let menu = wx.getStorageSync('data')
-    console.log('load', menu)
     this.setData({
       order: menu
     })
@@ -22,7 +22,33 @@ Page({
     this.setData({
       totalPrice: totalPrice
     })
+    let customer_id = wx.getStorageSync('customer_id')
+    this.setData({
+      customer_id: customer_id
+    })
+    console.log('load data', this.data)
     //wx.clearStorageSync('data')
+  },
+
+  submitOrder: function () {
+    var that = this
+    wx.request({
+      url: 'http://206.189.223.252/api/restaurant/orders/3',
+      data: {
+        'foods': that.data.order
+      },
+      method: 'POST',
+      header: {
+        'content-type':'application/x-www-form-urlencoded'
+      },
+      success: function(res) {
+        console.log(res)
+      },
+      fail: function(res) {
+        console.log(res)
+      }
+
+    })
   },
 
   /**

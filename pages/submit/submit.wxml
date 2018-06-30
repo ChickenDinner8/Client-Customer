@@ -1,6 +1,6 @@
 <!--submit.wxml-->
 <template name="orderItem">
-  <view class="sub-cart-list" wx:if="{{count > 0}}">
+  <view class="sub-cart-list" wx:if="{{num > 0}}">
     <view class="sub-cart-img">
         <view class="sub-cart-img-inner">
             <image src="{{image}}"></image>
@@ -9,7 +9,7 @@
     <view class="sub-cart-middle w4">
         <view class="sub-cart-title">
             <view class='name'>{{food_name}}</view>
-            <view class="amount">x{{count}}</view>
+            <view class="amount">x{{num}}</view>
             <view class="s_price">￥{{price}}</view>
         </view>
     </view>
@@ -31,7 +31,7 @@
             <view class="weui-cell">
                 <view class="weui-cell__bd">
                     <textarea class="weui-textarea" placeholder="请输入对菜品的要求" style="height: 3.3em" />
-                    <view class="weui-textarea-counter">0/200</view>
+                    <view class="weui-textarea-numer">0/200</view>
                 </view>
             </view>
         </view>
@@ -40,7 +40,7 @@
             <view>总计： ￥<text class="price_num">{{totalPrice}}</text></view>
           </view>
           <view class="pay">
-	          <button type="default">提交订单</button>
+	          <button type="default" bindtap="submitOrder">提交订单</button>
           </view>
         </view>
         
