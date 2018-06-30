@@ -7,12 +7,7 @@ Page({
     motto: 'ChickenDinner8！',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'), 
-    menu: [],
-    shopping: [],
-    latestPrice: '0',
-    totalPrice: '0',
-    totalNum: '0'
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
   bindViewTap: function() {
@@ -47,36 +42,6 @@ Page({
         }
       })
     }
-
-    // request 
-    var that = this
-    wx.request({
-      url: 'http://206.189.223.252/api/menu/4',
-      method: 'GET',
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function(res) {
-        //console.log('get menu', res.data.foods)
-        that.setData({
-          menu: res.data.foods
-        })
-        for (var i = 0; i < that.data.menu.length; i++) {
-          //that.data.menu[i].index = i.toString();
-          var param = {}
-          var string = 'menu[' + i + '].index'
-          param[string] = i
-          that.setData(param)
-          string = 'menu[' + i + '].count'
-          param[string] = 0
-          that.setData(param)
-        }
-        //console.log('set menu', that.data.menu)
-      },
-      fail: function(res) {
-        console.log('failed to load!')
-      }
-    })
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -86,10 +51,9 @@ Page({
       hasUserInfo: true
     })
   },
-  //保留当前页面，跳转到应用内的某个页面，使用wx.navigateBack可以返回到原页面。
-  to_comment:function() {
+  to_menu: function () {
     wx.navigateTo({
-      url: '../comment/comment',
+      url: '../menu/menu',
       success: function (res) {
         // success
       },
@@ -100,36 +64,5 @@ Page({
         // complete
       }
     })
-  },
-
-  to_submit: function () {
-    wx.setStorageSync('data', this.data.menu)
-    wx.setStorageSync('totalPrice', this.data.totalPrice)
-    
-    wx.navigateTo({
-      url: '../submit/submit',
-      success: function (res) {
-        // success
-      },
-      fail: function () {
-        // fail
-      },
-      complete: function () {
-        // complete
-      }
-    })
-  },
-
-  // 将菜品加入购物车
-  addDish: function(event) {
-    //console.log('set menu', this.data.menu)
-    //console.log('click event', event.target)
-    var obj = this.data.menu[event.target.dataset.index]
-    this.setData({ latestPrice: parseFloat(this.data.latestPrice) + parseFloat(obj.price) })
-    this.setData({ totalPrice: this.data.latestPrice})
-    this.setData({ totalNum: parseInt(this.data.totalNum) + 1 })
-    obj.count++
-    console.log('add food ', obj.index)
-  },
-
+  }
 })
