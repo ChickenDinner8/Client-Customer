@@ -22,3 +22,9 @@
 button {
   margin-bottom: 20rpx;
 }
+
+.welcome {
+  color: #abe;
+  font-size: 50rpx;
+  text-align: center;
+}
