@@ -46,7 +46,7 @@ Page({
     wx.showToast({
       title: '订单提交中',
       icon: 'loading',
-      duration: 3000
+      duration: 300000
     })
 
     let tableInfo = wx.getStorageSync('tableInfo')

@@ -16,8 +16,8 @@
     </view>
     <view class="weui-media-box__desc ">{{desc}}</view>
       <view class="weui-cell__ft like">
-        <image class='commentstars' src="../../images/like.png" style="margin-right: 1px; vertical-align: middle;width:20px; height: 20px;"></image> {{likeCount}}
-        <image class='commentstars' src="../../images/unlike.png" style="margin-right: 1px;vertical-align: middle;width:20px; height: 20px;"></image> {{unlikeCount}}
+        <image class='commentstars' src="../../images/like.png" style="margin-right: 1px; vertical-align: middle;width:20px; height: 20px;" id="{{index}}" bindtap="addLike"></image> {{likeCount}}
+        <image class='commentstars' src="../../images/unlike.png" style="margin-right: 1px;vertical-align: middle;width:20px; height: 20px;" id="{{index}}" bindtap="addUnlike"></image> {{unlikeCount}}
       </view>
     </view>
   </navigator>
