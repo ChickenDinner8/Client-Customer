@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <template name="menuItem" >
   <view class="weui-cell">
-    <view class="weui-cell__hd"> <image src="{{image}}" style="width: 150rpx; height: 150rpx;"></image>
+    <view class="weui-cell__hd" style="margin-right: 18rpx;"> <image src="{{image}}" style="width: 150rpx; height: 150rpx;"></image>
     </view>
     <view class="weui-cell__bd">
         <view class="food-name">{{food_name}}</view>
