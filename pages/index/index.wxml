@@ -1,5 +1,7 @@
 <!--index.wxml-->
 <view class="container">
-  <button class="comfirm-button" type='primary' bindtap="to_menu">扫码点餐</button>
+  <text class="welcome">Welcome to Eat点点！</text>
+  <image src="../../images/logo.png" style="width: 200rpx; height: 200rpx;"></image>
+  <button class="scan-button" type='primary' bindtap="to_menu">扫码点餐</button>
   <button class="comfirm-button" type='default' bindtap="to_menu_trick">4餐厅233桌</button>
 </view>

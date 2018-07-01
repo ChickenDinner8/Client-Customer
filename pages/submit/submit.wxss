@@ -1,3 +1,10 @@
+.weui-panel__hd {
+  text-align:center;
+}
+.weui-cells {
+  display: inline;
+}
+
 .order_detail {
   height: 30px;
   border-bottom: 1px solid #9aa6c3;
