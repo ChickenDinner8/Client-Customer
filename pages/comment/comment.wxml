@@ -25,19 +25,19 @@
 
 <view class="page">
   <view class="page__hd header">
-    <view class="page__title">深夜食堂</view>
+    <view class="page__title">吃过，所以留下足迹</view>
     <view class="page__desc">人世间，酸甜苦辣，若长良川。</view>
   </view>
   <view class="page__bd">
     <view class="weui-panel weui-panel_access">
-      <view class="weui-panel__hd">全部评论（3）</view>
+      <view class="weui-panel__hd">全部评论（{{comment_count}}）</view>
         <view class="weui-panel__bd">
           <view wx:for="{{comment}}" wx:key="comment_block">
             <template is="commentItem" data="{{...item}}"/>
           </view> 
        </view>
         <view class="weui-panel__ft">
-            <view class="weui-cell weui-cell_access weui-cell_link" bindTap="toCommit">
+            <view class="weui-cell weui-cell_access weui-cell_link" id="comment" bindtap="toCommit">
                 <view class="weui-cell__bd">我也要评论</view>
                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
             </view>
