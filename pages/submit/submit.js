@@ -22,7 +22,8 @@ Page({
   onLoad: function (options) {
     let menu = wx.getStorageSync('data')
     this.setData({
-      order: menu
+      //order: menu
+      order: menu.filter( (res) => res.num > 0)
     })
     let totalPrice = wx.getStorageSync('totalPrice')
     this.setData({
@@ -45,14 +46,19 @@ Page({
     wx.showToast({
       title: '订单提交中',
       icon: 'loading',
-      duration: 30000
+      duration: 3000
     })
 
+    let tableInfo = wx.getStorageSync('tableInfo')
+    this.setData({
+      tableInfo: tableInfo
+    })
+    console.log('load tableInfo', this.data.tableInfo)
     let postBody = {}
     postBody = {foods: that.data.order}
     console.log('postBody', postBody);
     ERequest({
-      url: getApp().globalData.baseUrl + '/restaurant/orders/4/233',
+      url: getApp().globalData.baseUrl + '/restaurant/orders/'+this.data.tableInfo.restaurantId.toString()+'/'+this.data.tableInfo.tableId.toString(),
       method: 'POST',
       data: postBody,
       success: res => {

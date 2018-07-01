@@ -14,18 +14,25 @@ Page({
       img: '../../images/comment_img1.jpg',
       userImg: '../../images/userimg1.png',
       userName: '一叶知秋',
-      date: '2018-04-01',
-      desc: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。吧啦吧啦吧啦吧啦……',
-      likeCount: '10',
-      unlikeCount: '99'
+      date: '2018-05-28',
+      desc: '好吃的菜，可爱的人，有趣的心灵，还会再来的。',
+      likeCount: '31',
+      unlikeCount: '5'
     }, {
-      img: '../../images/comment_img1.jpg',
-      userImg: '../../images/userimg1.png',
+      img: '../../images/comment_img3.jpg',
+      userImg: '../../images/userimg3.png',
       userName: '就是不说名字的人',
-      date: '2018-02-11',
-      desc: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。吧啦吧啦吧啦吧啦……',
-      likeCount: '100',
-      unlikeCount: '50'
+      date: '2018-04-25',
+      desc: '恭喜爱我们总是帮我们debug的zj爸爸又成熟一岁，今天吃的很开心，喜欢这家餐厅，喜欢704在一起的每一天',
+      likeCount: '101',
+      unlikeCount: '0'
     }]
-  },  
+  }, 
+  toCommit: function() {
+    wx.showToast({
+      title: '功能正在开发中',
+      icon: 'loading',
+      duration: 3000
+    })
+  }
 });
