@@ -42,9 +42,9 @@
         <view class="item" wx:for="{{menu}}" wx:for-index="index" wx:if="{{menu[index].num!=0}}" wx:key="index">
             <view class="name ellipsis">{{menu[index].food_name}}</view>
             <view class="total">￥{{menu[index].price}}</view>
-            <view class="minus-btn" data-id="{{index}}" bindtap="tapReduceCart">-</view>
-            <view class="num">{{menu[index].mum}}</view>
-            <view class="add-btn" data-id="{{index}}" bindtap="tapAddCart">+</view>
+            <view class="minus-btn" data-index="{{index}}" bindtap="tapMinusCart">-</view>
+            <view class="num">{{menu[index].num}}</view>
+            <view class="add-btn" data-index="{{index}}" bindtap="tapAddCart">+</view>
         </view>
       </view>
 	</view>
