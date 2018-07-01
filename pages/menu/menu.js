@@ -152,6 +152,15 @@ Page({
     this.setData({ totalNum: parseInt(this.data.totalNum) + 1 })
     console.log('count ', obj.num)
   },
+  // 将菜品从购物车删除
+  removeDish: function(event) {
+    var newMenu = this.data.menu
+    var obj = this.data.menu[event.target.dataset.index]
+    newMenu[event.target.dataset.index].num--
+    this.setData ({menu:newMenu})
+    this.setData({ totalPrice: this.data.totalPrice - parseFloat(obj.price) })
+    this.setData({ totalNum: parseInt(this.data.totalNum) - 1 })
+  },
   showCartDetail: function () {
     this.setData({
       showCartDetail: !this.data.showCartDetail
@@ -162,5 +171,14 @@ Page({
       showCartDetail: false
     });
   },
+  tapAddCart: function (event) {
+    this.addDish(event)
+  },
+  tapMinusCart: function (event) {
+    this.removeDish(event)
+    if (!this.data.totalNum) {
+      this.setData({showCartDetail : !this.data.showCartDetail})
+    }
+  }
 
 })
