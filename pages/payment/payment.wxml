@@ -7,9 +7,9 @@
     </view>
 
     <view class="price content" >¥ {{totalPrice}}</view>
-    <view class="comfirm-button content">
+    <button class="comfirm-button content" bindtap="toPay">
     	立即支付
-    </view>
+    </button>
 
 
 </view>

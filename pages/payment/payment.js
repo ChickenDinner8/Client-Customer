@@ -18,6 +18,13 @@ Page({
     })
   },
 
+  toPay: function(){
+    wx.showToast({
+      title: '功能正在开发中',
+      icon: 'loading',
+      duration: 3000
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
