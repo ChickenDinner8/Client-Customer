@@ -79,7 +79,8 @@
   width: 60rpx;
   height: 60rpx;
   font-size: 60rpx;
-  color: #cd8c95;
+  /*color: #cd8c95;*/
+  color: #eeb4b4;
 }
 
 /**底部结算栏**/
