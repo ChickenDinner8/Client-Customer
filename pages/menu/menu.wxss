@@ -34,9 +34,14 @@
   margin-top: 12%;
   height: 1020rpx;
 }
+/* 同一行
 .weui-cell__ft {
   display: flex;
   flex-direction: row;
+}*/
+.food-detail {
+  height: 150rpx;
+  width: 370rpx;
 }
 .food-name {
   font-size: 35rpx;
@@ -46,9 +51,35 @@
   color: gainsboro;
 }
 .food-price {
-  font-size: 35rpx;
+  font-size: 40rpx;
   color: crimson;
-  margin-right:20rpx;
+  margin-left: 15rpx;
+  text-align: left;
+}
+
+/*菜品数量增减*/
+.edit {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rpx;
+}
+.menu-num {
+  height: 45rpx;
+  font-size: 35rpx;
+  color: black;
+  margin-right: 5rpx;
+  margin-left: 5rpx;
+  margin-bottom: 8rpx;
+}
+.menu-minus-btn, .menu-add-btn {
+  /*position: absolute;*/
+  /*margin-top: 10rpx;*/
+  line-height: 36rpx;
+  text-align: center;
+  width: 60rpx;
+  height: 60rpx;
+  font-size: 60rpx;
+  color: #cd8c95;
 }
 
 /**底部结算栏**/
@@ -144,6 +175,7 @@
   height: 38rpx;
   border-radius: 50%;
   font-size: 28rpx;
+  color: white;
   /*margin-top: 10rpx;
   width: 30rpx;
   height: 30rpx;

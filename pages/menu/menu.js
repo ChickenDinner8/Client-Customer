@@ -9,7 +9,6 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'), */
     menu: [],
-    shopping: [],
     totalPrice: 0,
     totalNum: '0',
     showCartDetail: false
@@ -132,9 +131,16 @@ Page({
     this.setData({ totalNum: parseInt(this.data.totalNum) - 1 })
   },
   showCartDetail: function () {
-    this.setData({
+    if (this.data.totalNum > 0) {
+      this.setData({
+        showCartDetail: !this.data.showCartDetail
+      });
+    }
+    /*this.setData({
       showCartDetail: !this.data.showCartDetail
-    });
+    });*/
+    console.log('flag', this.data.showCartDetail)
+    console.log('total', this.data.totalNum)
   },
   hideCartDetail: function () {
     this.setData({
@@ -147,7 +153,7 @@ Page({
   tapMinusCart: function (event) {
     this.removeDish(event)
     if (!this.data.totalNum) {
-      this.setData({showCartDetail : !this.data.showCartDetail})
+      this.setData({showCartDetail : false})
     }
   }
 

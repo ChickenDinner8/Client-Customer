@@ -3,13 +3,18 @@
   <view class="weui-cell">
     <view class="weui-cell__hd" style="margin-right: 18rpx;"> <image class="menu-img" src="{{image}}" style="width: 150rpx; height: 150rpx;"></image>
     </view>
-    <view class="weui-cell__bd">
+    <view class="food-detail">
         <view class="food-name">{{food_name}}</view>
         <view class="food-description">{{description}}</view>                        
     </view>
     <view class="weui-cell__ft">
       <view class="food-price">￥{{price}}</view>
-      <image src="../../images/add.png" style="width: 50rpx; height: 50rpx;" data-index="{{index}}" id="{{index}}" bindtap='addDish'></image>
+      <view class="edit">
+        <view class="menu-add-btn" data-index="{{index}}" id="{{index}}" bindtap='addDish'>+</view>
+        <view class="menu-num" hidden="{{!num}}">{{num}}</view>
+        <view class="menu-minus-btn" data-index="{{index}}" id="{{index}}" bindtap='removeDish' hidden="{{!num}}">-</view>
+      </view>
+      <!--<image src="../../images/add.png" style="width: 50rpx; height: 50rpx;" data-index="{{index}}" id="{{index}}" bindtap='addDish'></image>-->
     </view>
   </view>
 </template>
@@ -42,9 +47,9 @@
         <view class="item" wx:for="{{menu}}" wx:for-index="index" wx:if="{{menu[index].num!=0}}" wx:key="index">
             <view class="name ellipsis">{{menu[index].food_name}}</view>
             <view class="total">￥{{menu[index].price}}</view>
-            <view class="minus-btn" data-index="{{index}}" bindtap="tapMinusCart">-</view>
-            <view class="num">{{menu[index].num}}</view>
             <view class="add-btn" data-index="{{index}}" bindtap="tapAddCart">+</view>
+            <view class="num">{{menu[index].num}}</view>
+            <view class="minus-btn" data-index="{{index}}" bindtap="tapMinusCart">-</view>
         </view>
       </view>
 	</view>
